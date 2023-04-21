@@ -1,38 +1,115 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.chat-container {
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: scroll;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.message-container {
+  width: 50%;
+  display: flex;
+  margin-top: 10px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user .message {
+  background-color: #e6f3ff;
+}
+
+.chatgpt .message {
+  background-color: #f2f2f2;
+}
+
+
+/* Messages container */
+.messages {
+  height: 400px;
+  padding: 10px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+}
+
+/* Message bubble */
+.message {
+  display: flex;
+  align-items: flex-start;
+  max-width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+/* User message */
+.message.user {
+  background-color: #c5e5ff;
+  flex-direction: row-reverse;
+}
+
+/* ChatGPT message */
+.message.chatgpt {
+  background-color: #f0f0f0;
+  flex-direction: row;
+}
+
+/* Avatar */
+.avatar {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+/* User avatar */
+.avatar.user {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+/* ChatGPT avatar */
+.avatar.chatgpt {
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+/* Input container */
+.input-container {
+  width: 100%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  padding: 10px;
+  position: absolute;
+  bottom: 50px;
+}
+
+/* Input field */
+.input-container input {
+  width: 50%;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  font-size: 16px;
+}
+
+/* Input button */
+.input-container button {
+  width: 60px;
+  height: 40px;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 5px;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  font-size: 16px;
+  cursor: pointer;
 }
